@@ -1,4 +1,4 @@
-# codebottle-python
+# codebottle-python  ![TravisCI](https://travis-ci.org/codebottle-io/codebottle-python.svg)
 A Python library to interact with CodeBottle's API.
 This is obviously still in development.
 
