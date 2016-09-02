@@ -23,3 +23,7 @@ secure = codebottle.verifysecure(secure_token="Some type of token here")
 
 From git:
 ```pip install git+https://github.com/codebottle-io/codebottle-python.git```
+
+##TODO:
+
+- Convert dicts to classes
