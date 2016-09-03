@@ -17,7 +17,7 @@ class Result(object):
 	"""A class with attributes of a codebottle API result"""
 	def __init__(self, r):
 		self.json = r.json()
-		if self.json["error"] is not "":
+		if self.json["error"]:
 			raise CodebottleError(self.json["error"])
 
 		for k, v in self.json.items():
