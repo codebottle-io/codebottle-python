@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(name='codebottle',
       version='0.0.1',
@@ -7,7 +7,7 @@ setup(name='codebottle',
       author='Luke J.',
       author_email='support@codebottle.io',
       license='GNU',
-      packages=['codebottle'],
+      packages=find_packages(),
       install_requires=['requests'],
       include_package_data=True,
       zip_safe=False)
