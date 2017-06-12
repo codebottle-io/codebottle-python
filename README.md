@@ -2,7 +2,7 @@
 A Python library to interact with CodeBottle's API.
 This is obviously still in development.
 
-##Example:
+## Example:
 ```python
 import codebottle
 
@@ -19,11 +19,11 @@ browse = codebottle.browse(limit=10).results
 secure = codebottle.verifysecure(secure_token="Some type of token here")
 ```
 
-##Installing
+## Installing
 
 From git:
 ```pip install git+https://github.com/codebottle-io/codebottle-python.git```
 
-##TODO:
+## TODO:
 
 - Convert dicts to classes
