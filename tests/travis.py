@@ -1,13 +1,15 @@
-import codebottle
+from codebottle import CodeBottle
 
-#Results of a search
-search = codebottle.search(keywords="java").results
+cb = CodeBottle()
 
-#Get a snippet
-snippet = codebottle.get(id="373dcc67").data
+# Results of a search
+search = cb.snippets.get(keywords='java').data
 
-#Browse
-browse = codebottle.browse(limit=10).results
+# Get a snippet
+snippet = cb.snippets.get('91f98993c8').data
+
+# Browse
+browse = cb.snippets.new().data
 
 print(search)
 print(snippet)

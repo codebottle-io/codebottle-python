@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='codebottle',
-      version='0.0.1',
+      version='0.1.0',
       description="A Python library to interact with CodeBottle's API",
       url='https://github.com/codebottle-io/codebottle-python',
       author='Luke J.',
