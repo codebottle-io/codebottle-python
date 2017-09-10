@@ -21,6 +21,7 @@ class CodeBottle(object):
         self.api_url = 'https://api.codebottle.io'
         self.api_accept = 'application/vnd.codebottle.v1+json'
         self.token = token
+        self.snippets = self.Snippets(self)
 
     def _build_url(self, endpoint, *args):
         url = '{0}/{1}'.format(self.api_url, endpoint)
@@ -47,11 +48,19 @@ class CodeBottle(object):
     def categories(self, *args):
         return self._get('categories', *args)
 
-    def snippets(self, *args, **kwargs):
-        return self._get('snippets', *args, **kwargs)
+    class Snippets(object):
 
-    def create_snippet(self, **kwargs):
-        return self._post('snippets', **kwargs)
+        def __init__(self, parent):
+            self.parent = parent
 
-    def vote(self, *args, **kwargs):
-        return self._post('snippets', *args, **kwargs)
+        def get(self, *args, **kwargs):
+            return self.parent._get('snippets', *args, **kwargs)
+
+        def new(self):
+            return self.get('new')
+
+        def create(self, **kwargs):
+            return self.parent._post('snippets', **kwargs)
+
+        def vote(self, *args, **kwargs):
+            return self.parent._post('snippets', *args, **kwargs)
