@@ -4,19 +4,18 @@ This is obviously still in development.
 
 ## Example:
 ```python
-import codebottle
+from codebottle import CodeBottle
 
-#Results of a search
-search = codebottle.search(keywords="java").results
+cb = CodeBottle()
 
-#Get a snippet
-snippet = codebottle.get(id="373dcc67").data
+# Results of a search
+search = cb.snippets(keywords='java').data
 
-#Browse
-browse = codebottle.browse(limit=10).results
+# Get a snippet
+snippet = cb.snippets('91f98993c8').data
 
-#Verify secure
-secure = codebottle.verifysecure(secure_token="Some type of token here")
+# Get newest snippets
+browse = cb.snippets('new').results
 ```
 
 ## Installing
